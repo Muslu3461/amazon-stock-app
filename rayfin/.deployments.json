@@ -1,0 +1,15 @@
+{
+  "deployments": {
+    "fabricapp": {
+      "fabricItemId": "b28beadc-37f6-477d-a49c-47f976bb9cd9",
+      "fabricApiUrl": "https://westeurope.pbidedicated.windows.net/webapi/capacities/eb1b15cb-46ea-4738-a537-b7a01d94801d/workloads/BaaS/BaaSService/automatic/v1/workspaces/0e869e65-acef-4dc1-a4d4-039681817837/appbackends/b28beadc-37f6-477d-a49c-47f976bb9cd9",
+      "fabricWorkspaceId": "0e869e65-acef-4dc1-a4d4-039681817837",
+      "fabricTenantId": "096df38d-ec5c-44c6-b24a-fbeeab2a9fef",
+      "publishableKey": "pk-4-xCM7hdY4D7mtzGPmZw",
+      "hostingUrl": "https://tidal-creek-811db41606-westeurope.webapp.fabricapps.net",
+      "fabricDeepLink": "https://app.fabric.microsoft.com/groups/0e869e65-acef-4dc1-a4d4-039681817837/appbackends/b28beadc-37f6-477d-a49c-47f976bb9cd9?ctid=096df38d-ec5c-44c6-b24a-fbeeab2a9fef",
+      "deployedAt": "2026-06-05T17:46:30.290Z"
+    }
+  },
+  "active": "fabricapp"
+}
