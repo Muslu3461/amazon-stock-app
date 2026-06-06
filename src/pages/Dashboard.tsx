@@ -132,7 +132,6 @@ export default function Dashboard() {
               <p style={{ fontSize: 12, color: 'var(--muted)', marginTop: 2 }}>Monthly average closing price · AMZN</p>
             </div>
             <div style={{ display: 'flex', gap: 6 }}>
-              {/* Metric toggle */}
               {(['price', 'volume', 'range'] as const).map(m => (
                 <button key={m} onClick={() => setMetric(m)} style={{
                   fontSize: 11, fontWeight: 500, padding: '4px 12px', borderRadius: 20,
@@ -167,8 +166,7 @@ export default function Dashboard() {
                   </linearGradient>
                 </defs>
                 <CartesianGrid stroke="rgba(255,255,255,0.04)" vertical={false} />
-                <XAxis dataKey="month" tick={{ fill: '#7b8799', fontSize: 10 }} axisLine={false} tickLine={false}
-                  interval={Math.floor(filtered.length / 8)} />
+                <XAxis dataKey="month" tick={{ fill: '#7b8799', fontSize: 10 }} axisLine={false} tickLine={false} interval={Math.floor(filtered.length / 8)} />
                 <YAxis tickFormatter={v => `$${v}`} tick={{ fill: '#7b8799', fontSize: 11 }} axisLine={false} tickLine={false} width={48} domain={['auto', 'auto']} />
                 <Tooltip content={<CustomTooltip />} />
                 <ReferenceLine y={AVG_CLOSE} stroke={BLUE} strokeDasharray="4 4" strokeOpacity={0.5} label={{ value: 'Avg', fill: BLUE, fontSize: 10 }} />
@@ -264,28 +262,6 @@ export default function Dashboard() {
                 </div>
               )
             })}
-          </div>
-        </div>
-
-        {/* Power BI Embedded */}
-        <div style={{ ...card, marginBottom: 16 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-            <p style={{ fontSize: 14, fontWeight: 600 }}>Interactive Power BI Report</p>
-            <span style={{
-              fontSize: 10, fontWeight: 600, padding: '2px 8px', borderRadius: 20,
-              background: 'rgba(59,130,246,0.12)', color: BLUE, border: `1px solid ${BLUE}40`,
-            }}>EMBEDDED · FabricApp Workspace</span>
-          </div>
-          <div style={{ borderRadius: 10, overflow: 'hidden', border: '1px solid var(--border)' }}>
-            <iframe
-              title="Amazon Daily Stock Price"
-              width="100%"
-              height="540"
-              src="https://app.powerbi.com/reportEmbed?reportId=f745ca57-5b26-4360-8d8e-b77a59b509e9&autoAuth=true&ctid=096df38d-ec5c-44c6-b24a-fbeeab2a9fef"
-              frameBorder={0}
-              allowFullScreen
-              style={{ display: 'block', background: '#fff' }}
-            />
           </div>
         </div>
 
